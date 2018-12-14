@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <title>SotaSTATS</title>
+    <meta charset="utf-8">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
+
+    <style>
+    
+    </style>
+    
+</head>
+
+<body>
+    <div class="content">
+	<center>
+	<br>
+	Welcome to the barebones ugly site for SotaSTATS.<br>
+	<br>
+        <form>
+            <input id="SNL" type="text" name="SceneName" size="30" class="form-control" placeholder="Scene">
+			<input id="AT" type="text" name="Archetype" size="30" class="form-control" placeholder="Archetype">
+			<input type="datetime-local" name="timestamp" size="30" >
+        </form>
+    </div>
+	<script>
+	$('#SNL').autocomplete({
+		source: "afGetScenes.php",
+		minLength: 3
+	});
+	$('#AT').autocomplete({
+		source: "afGetArchetypes.php",
+		minLength: 3
+	});
+	
+    </script>
+</body>
+
