@@ -22,3 +22,7 @@ php loadSceneBased.php
 Don't forget to update dbIncludeLoad.php with your database login information site/user/pass
 
 You'll need to create everything in the schema.sql dump
+
+The stored procedures should be mostly in procs.sql dump
+
+Make sure to change DEFINER to match your user.
